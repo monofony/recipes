@@ -12,7 +12,7 @@ Add the following to the `composer` `extra.symfony.endpoint` configuration:
             "allow-contrib": false,
             "require": "7.2.*",
             "endpoint": [
-                "https://raw.githubusercontent.com/monofony/symfony-packs/refs/heads/flex/main/index.json",
+                "https://raw.githubusercontent.com/monofony/recipes/refs/heads/flex/main/index.json",
                 "flex://defaults"
             ]
         }
