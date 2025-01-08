@@ -10,11 +10,11 @@
     "branch": "main",
     "is_contrib": true,
     "_links": {
-        "repository": "github.com/monofony/symfony-packs",
-        "origin_template": "{package}:{version}@github.com/monofony/symfony-packs:main",
-        "recipe_template": "https://raw.githubusercontent.com/monofony/symfony-packs/flex/main/{package_dotted}.{version}.json",
+        "repository": "github.com/monofony/recipes",
+        "origin_template": "{package}:{version}@github.com/monofony/recipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/monofony/recipes/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/monofony/symfony-packs/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/monofony/recipes/flex/main/archived/{package_dotted}/{ref}.json",
         "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
