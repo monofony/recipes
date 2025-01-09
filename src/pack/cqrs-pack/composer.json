@@ -5,6 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "monofony/cqrs-meta": "*",
         "symfony/messenger": "*"
     }
 }
