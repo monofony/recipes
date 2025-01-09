@@ -1,0 +1,9 @@
+{
+    "name": "monofony/cqrs-infrastructure-meta",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "A meta package providing recipes for CQRS",
+    "require": {
+        "monofony/cqrs-application-meta": "*"
+    }
+}

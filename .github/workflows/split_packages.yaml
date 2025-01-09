@@ -18,8 +18,12 @@ jobs:
             fail-fast: false
             matrix:
                 package:
-                    - { path: 'meta/cqrs-meta', name: 'cqrs-meta' }
+                    - { path: 'meta/cqrs-application-meta', name: 'cqrs-application-meta' }
+                    - { path: 'meta/cqrs-infrastructure-meta', name: 'cqrs-infrastructure-meta' }
                     - { path: 'pack/cqrs-pack', name: 'cqrs-pack' }
+                    - { path: 'meta/repository-domain-meta', name: 'repository-domain-meta' }
+                    - { path: 'meta/repository-infrastructure-meta', name: 'repository-infrastructure-meta' }
+                    - { path: 'pack/repository-pack', name: 'repository-pack' }
         steps:
             -   uses: actions/checkout@v3
                 with:

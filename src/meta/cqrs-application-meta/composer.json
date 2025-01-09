@@ -1,5 +1,5 @@
 {
-    "name": "monofony/cqrs-meta",
+    "name": "monofony/cqrs-application-meta",
     "type": "metapackage",
     "license": "MIT",
     "description": "A meta package providing recipes for CQRS"

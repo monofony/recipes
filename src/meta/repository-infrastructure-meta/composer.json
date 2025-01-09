@@ -1,0 +1,9 @@
+{
+    "name": "monofony/repository-infrastructure-meta",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "A meta package providing recipes for repositories",
+    "require": {
+        "monofony/repository-domain-meta": "*"
+    }
+}
