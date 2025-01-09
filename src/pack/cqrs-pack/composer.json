@@ -1,13 +1,10 @@
 {
     "name": "monofony/cqrs-pack",
     "description": "Pack for CQRS",
-    "type": "meta-package",
+    "type": "symfony-pack",
     "license": "MIT",
     "require": {
         "php": "^8.3",
         "symfony/messenger": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^11.4"
     }
 }
