@@ -1,7 +1,7 @@
 {
     "aliases": [],
     "recipes": {
-        "monofony/cqrs-pack": [
+        "monofony/cqrs-meta": [
             "0.1"
         ]
     },

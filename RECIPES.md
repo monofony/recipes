@@ -4,4 +4,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 
 | Package | Latest Recipe |
 | --- | --- |
-| [monofony/cqrs-pack](https://packagist.org/packages/monofony/cqrs-pack) | [0.1](monofony/cqrs-pack/0.1) |
+| [monofony/cqrs-meta](https://packagist.org/packages/monofony/cqrs-meta) | [0.1](monofony/cqrs-meta/0.1) |
