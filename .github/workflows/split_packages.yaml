@@ -18,7 +18,7 @@ jobs:
             fail-fast: false
             matrix:
                 package:
-                    - { name: 'Cqrs', path: 'cqrs-pack' }
+                    - { path: 'pack/cqrs-pack', name: 'cqrs-pack' }
         steps:
             -   uses: actions/checkout@v3
                 with:
@@ -27,9 +27,9 @@ jobs:
             -   name: Split of ${{ matrix.package.name }}
                 uses: alphpaca/monoplus-split-action@2022.1-beta3
                 with:
-                    package_path: 'src/${{ matrix.package.name }}'
+                    package_path: 'src/${{ matrix.package.pack }}'
                     personal_access_token: ${{ secrets.MONOPLUS_PAT }}
                     git_username: 'loic425'
                     git_email: 'lc.fremont@gmail.com'
                     repository_owner: "monofony"
-                    repository_name: "${{ matrix.package.path }}"
+                    repository_name: "${{ matrix.package.name }}"

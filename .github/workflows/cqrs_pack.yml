@@ -50,18 +50,12 @@ jobs:
                         ${{ steps.composer-cache.outputs.dir }}
                     key: ${{ github.run_id }}-${{ runner.os }}-${{ hashFiles('composer.json') }}-symfony-${{ matrix.symfony }}
 
-            -   name: "Validate composer.json"
-                run: (cd src/Cqrs && composer validate --no-check-version)
-
-            -   name: "Install dependencies"
-                run: (cd src/Cqrs && composer update --no-interaction --no-scripts)
-
             -   name: "Create test application"
                 run: |
                     git config --global user.email "you@example.com"
                     git config --global user.name "Your Name"
-                    (cd src/Cqrs && make create-test-application)
+                    (cd tests/Cqrs && make create-test-application)
                 id: end-of-setup
 
             -   name: "Run PHPUnit"
-                run: (cd src/Cqrs && vendor/bin/phpunit)
+                run: (cd tests/Cqrs/app && vendor/bin/phpunit)
