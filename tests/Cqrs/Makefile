@@ -19,7 +19,7 @@ add-requirements:
 
 .PHONY: copy-recipe
 copy-recipe:
-	cp -R ./../../monofony/cqrs-pack/0.1/* ${TEST_APP_DIR}
+	cp -R ./../../monofony/cqrs-meta/0.1/* ${TEST_APP_DIR}
 
 .PHONY: copy-tests-resources
 copy-tests-resources:
