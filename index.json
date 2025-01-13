@@ -13,6 +13,9 @@
         "monofony/repository-infrastructure-meta": [
             "0.1"
         ],
+        "monofony/security-admin-meta": [
+            "0.1"
+        ],
         "monofony/security-application-meta": [
             "0.1"
         ],
