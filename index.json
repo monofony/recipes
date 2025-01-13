@@ -12,6 +12,15 @@
         ],
         "monofony/repository-infrastructure-meta": [
             "0.1"
+        ],
+        "monofony/security-application-meta": [
+            "0.1"
+        ],
+        "monofony/security-domain-meta": [
+            "0.1"
+        ],
+        "monofony/security-infrastructure-meta": [
+            "0.1"
         ]
     },
     "recipe-conflicts": [],

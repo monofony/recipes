@@ -1,0 +1,128 @@
+{
+    "manifests": {
+        "monofony/security-domain-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Security/Domain/Model/User/AdminUser.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Security\\Domain\\Model\\User;",
+                        "",
+                        "use App\\Security\\Domain\\ValueObject\\User\\AdminUserEmail;",
+                        "use App\\Security\\Domain\\ValueObject\\User\\AdminUserId;",
+                        "use App\\Security\\Domain\\ValueObject\\User\\AdminUserPassword;",
+                        "",
+                        "final readonly class AdminUser",
+                        "{",
+                        "    public function __construct(",
+                        "        public AdminUserId $id,",
+                        "        public AdminUserEmail $email,",
+                        "        public AdminUserPassword|null $password = null,",
+                        "    ) {",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Security/Domain/Repository/AdminUserRepositoryInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Security\\Domain\\Repository;",
+                        "",
+                        "use App\\Security\\Domain\\Model\\User\\AdminUser;",
+                        "use App\\Shared\\Domain\\Repository\\RepositoryInterface;",
+                        "",
+                        "/**",
+                        " * @extends RepositoryInterface<AdminUser>",
+                        " */",
+                        "interface AdminUserRepositoryInterface extends RepositoryInterface",
+                        "{",
+                        "    public function save(AdminUser $adminUser): void;",
+                        "",
+                        "    public function remove(AdminUser $adminUser): void;",
+                        "",
+                        "    public function ofId(string $id): AdminUser|null;",
+                        "",
+                        "    public function withAscendingEmailSorting(): static;",
+                        "",
+                        "    public function withDescendingEmailSorting(): static;",
+                        "",
+                        "    public function withSearchQuery(string $query): static;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Security/Domain/ValueObject/User/AdminUserEmail.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Security\\Domain\\ValueObject\\User;",
+                        "",
+                        "final readonly class AdminUserEmail",
+                        "{",
+                        "    public function __construct(",
+                        "        public string $value,",
+                        "    ) {",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Security/Domain/ValueObject/User/AdminUserId.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Security\\Domain\\ValueObject\\User;",
+                        "",
+                        "final readonly class AdminUserId",
+                        "{",
+                        "    public function __construct(",
+                        "        public string $value,",
+                        "    ) {",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Security/Domain/ValueObject/User/AdminUserPassword.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Security\\Domain\\ValueObject\\User;",
+                        "",
+                        "final readonly class AdminUserPassword",
+                        "{",
+                        "    public function __construct(",
+                        "        public string $value,",
+                        "    ) {",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b78cdcb0bedd755d91827fbad944d0e58a220041"
+        }
+    }
+}
