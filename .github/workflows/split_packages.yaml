@@ -24,6 +24,10 @@ jobs:
                     - { path: 'meta/repository-domain-meta', name: 'repository-domain-meta' }
                     - { path: 'meta/repository-infrastructure-meta', name: 'repository-infrastructure-meta' }
                     - { path: 'pack/repository-pack', name: 'repository-pack' }
+                    - { path: 'meta/security-domain-meta', name: 'security-domain-meta' }
+                    - { path: 'meta/security-application-meta', name: 'security-application-meta' }
+                    - { path: 'meta/security-infrastructure-meta', name: 'security-infrastructure-meta' }
+                    - { path: 'pack/security-pack', name: 'security-pack' }
         steps:
             -   uses: actions/checkout@v3
                 with:
