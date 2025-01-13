@@ -1,0 +1,11 @@
+{
+    "name": "monofony/security-admin-meta",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "A meta package providing recipes for security",
+    "require": {
+        "monofony/security-infrastructure-meta": "*",
+        "sylius/grid-bundle": "*",
+        "sylius/resource-bundle": "*"
+    }
+}

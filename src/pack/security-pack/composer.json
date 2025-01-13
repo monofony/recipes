@@ -8,6 +8,7 @@
         "doctrine/orm": "*",
         "monofony/security-application-meta": "*",
         "monofony/security-domain-meta": "*",
-        "monofony/security-infrastructure-meta": "*"
+        "monofony/security-infrastructure-meta": "*",
+        "monofony/security-admin-meta": "*"
     }
 }
