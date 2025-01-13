@@ -1,0 +1,79 @@
+{
+    "manifests": {
+        "monofony/repository-domain-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Shared/Domain/Repository/PaginatorInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Domain\\Repository;",
+                        "",
+                        "/**",
+                        " * @template T of object",
+                        " *",
+                        " * @extends \\IteratorAggregate<array-key, T>",
+                        " */",
+                        "interface PaginatorInterface extends \\IteratorAggregate, \\Countable",
+                        "{",
+                        "    public function getCurrentPage(): int;",
+                        "",
+                        "    public function getItemsPerPage(): int;",
+                        "",
+                        "    public function getLastPage(): int;",
+                        "",
+                        "    public function getTotalItems(): int;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Domain/Repository/RepositoryInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Domain\\Repository;",
+                        "",
+                        "/**",
+                        " * @template T of object",
+                        " *",
+                        " * @extends \\IteratorAggregate<array-key, T>",
+                        " */",
+                        "interface RepositoryInterface extends \\IteratorAggregate, \\Countable",
+                        "{",
+                        "    /**",
+                        "     * @return \\Iterator<T>",
+                        "     */",
+                        "    public function getIterator(): \\Iterator;",
+                        "",
+                        "    public function count(): int;",
+                        "",
+                        "    /**",
+                        "     * @return PaginatorInterface<T>|null",
+                        "     */",
+                        "    public function paginator(): PaginatorInterface|null;",
+                        "",
+                        "    /**",
+                        "     * @return static<T>",
+                        "     *",
+                        "     * @phpstan-ignore-next-line",
+                        "     */",
+                        "    public function withPagination(int $page, int $itemsPerPage): static;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "85f6fd784911a5e93877ecb24f520a4aa52a5148"
+        }
+    }
+}

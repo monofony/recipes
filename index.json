@@ -1,7 +1,16 @@
 {
     "aliases": [],
     "recipes": {
-        "monofony/cqrs-meta": [
+        "monofony/cqrs-application-meta": [
+            "0.1"
+        ],
+        "monofony/cqrs-infrastructure-meta": [
+            "0.1"
+        ],
+        "monofony/repository-domain-meta": [
+            "0.1"
+        ],
+        "monofony/repository-infrastructure-meta": [
             "0.1"
         ]
     },

@@ -1,0 +1,122 @@
+{
+    "manifests": {
+        "monofony/cqrs-application-meta": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Shared/Application/Command/CommandBusInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Command;",
+                        "",
+                        "interface CommandBusInterface",
+                        "{",
+                        "    public function dispatch(CommandInterface $command): mixed;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Application/Command/CommandHandlerInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Command;",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Attribute\\AutoconfigureTag;",
+                        "",
+                        "#[AutoconfigureTag(",
+                        "    name: 'messenger.message_handler',",
+                        "    attributes: [",
+                        "        'bus' => 'command.bus',",
+                        "    ],",
+                        ")]",
+                        "interface CommandHandlerInterface",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Application/Command/CommandInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Command;",
+                        "",
+                        "interface CommandInterface",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Application/Query/QueryBusInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Query;",
+                        "",
+                        "interface QueryBusInterface",
+                        "{",
+                        "    public function ask(QueryInterface $query): mixed;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Application/Query/QueryHandlerInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Query;",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Attribute\\AutoconfigureTag;",
+                        "",
+                        "#[AutoconfigureTag(",
+                        "    name: 'messenger.message_handler',",
+                        "    attributes: [",
+                        "        'bus' => 'query.bus',",
+                        "    ],",
+                        ")]",
+                        "interface QueryHandlerInterface",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Shared/Application/Query/QueryInterface.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Shared\\Application\\Query;",
+                        "",
+                        "interface QueryInterface",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "515106edea03fdf544adc46c14b640a49291a7d7"
+        }
+    }
+}
