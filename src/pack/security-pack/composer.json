@@ -1,0 +1,13 @@
+{
+    "name": "monofony/repository-pack",
+    "description": "Pack for repositories",
+    "type": "symfony-pack",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "doctrine/orm": "*",
+        "monofony/security-application-meta": "*",
+        "monofony/security-domain-meta": "*",
+        "monofony/security-infrastructure-meta": "*"
+    }
+}

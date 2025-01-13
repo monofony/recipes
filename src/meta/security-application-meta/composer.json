@@ -1,0 +1,9 @@
+{
+    "name": "monofony/security-application-meta",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "A meta package providing recipes for security",
+    "require": {
+        "monofony/cqrs-application-meta": "*"
+    }
+}
