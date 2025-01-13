@@ -1,0 +1,11 @@
+{
+    "name": "monofony/security-infrastructure-meta",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "A meta package providing recipes for security",
+    "require": {
+        "monofony/cqrs-infrastructure-meta": "*",
+        "monofony/repository-infrastructure-meta": "*",
+        "monofony/security-domain-meta": "*"
+    }
+}
