@@ -27,6 +27,7 @@ jobs:
                     - { path: 'meta/security-domain-meta', name: 'security-domain-meta' }
                     - { path: 'meta/security-application-meta', name: 'security-application-meta' }
                     - { path: 'meta/security-infrastructure-meta', name: 'security-infrastructure-meta' }
+                    - { path: 'meta/security-admin-meta', name: 'security-admin-meta' }
                     - { path: 'pack/security-pack', name: 'security-pack' }
         steps:
             -   uses: actions/checkout@v3
