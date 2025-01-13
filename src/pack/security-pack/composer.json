@@ -5,10 +5,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "doctrine/orm": "*",
+        "doctrine/doctrine-bundle": "*",
         "monofony/security-application-meta": "*",
         "monofony/security-domain-meta": "*",
         "monofony/security-infrastructure-meta": "*",
-        "monofony/security-admin-meta": "*"
+        "monofony/security-admin-meta": "*",
+        "sylius/bootstrap-admin-ui": "*",
+        "sylius/ui-translations": "*"
     }
 }
